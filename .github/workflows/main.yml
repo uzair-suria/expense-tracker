@@ -25,4 +25,4 @@ jobs:
       run: npm install -g surge
 
     - name: Deploy to Surge
-      run:  surge ./build https://uas-expensetracker.surge.sh/ --token ${{secrets.SURGE_KEY}}
+      run:  surge ./build https://uas-expensetracker.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
