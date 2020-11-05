@@ -10,10 +10,10 @@ export const IncomeExpenses = () => {
 		.reduce((acc, amount) => (acc += amount), 0)
 		.toFixed(2);
 
-	const expense =
-		amounts
-			.filter((amount) => amount < 0)
-			.reduce((acc, amount) => (acc += amount), 0) * -(1).toFixed(2);
+	const expense = amounts
+		.filter((amount) => amount < 0)
+		.reduce((acc, amount) => (acc += -amount), 0)
+		.toFixed(2);
 
 	return (
 		<div className="inc-exp-container">
